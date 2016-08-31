@@ -58,4 +58,5 @@ class SetConstants {
         }
     }
     
+    static let locationManager = CLLocationManager()
 }
