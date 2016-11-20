@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B03C17EB1D4ECF50008146A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C17EA1D4ECF50008146A0 /* AppDelegate.swift */; };
-		B03C17ED1D4ECF50008146A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C17EC1D4ECF50008146A0 /* ViewController.swift */; };
 		B03C17F01D4ECF50008146A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03C17EE1D4ECF50008146A0 /* Main.storyboard */; };
 		B03C17F31D4ECF50008146A0 /* NewWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B03C17F11D4ECF50008146A0 /* NewWeather.xcdatamodeld */; };
 		B03C17F51D4ECF50008146A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03C17F41D4ECF50008146A0 /* Assets.xcassets */; };
 		B03C17F81D4ECF50008146A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03C17F61D4ECF50008146A0 /* LaunchScreen.storyboard */; };
 		B03C18031D4ECF50008146A0 /* NewWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C18021D4ECF50008146A0 /* NewWeatherTests.swift */; };
 		B03C180E1D4ECF50008146A0 /* NewWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C180D1D4ECF50008146A0 /* NewWeatherUITests.swift */; };
+		B0E4F1AF1DE1C967001D25CA /* SetTimeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */; };
+		B0E4F1B01DE1C967001D25CA /* SetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AC1DE1C967001D25CA /* SetConstants.swift */; };
+		B0E4F1B11DE1C967001D25CA /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */; };
+		B0E4F1B21DE1C967001D25CA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AE1DE1C967001D25CA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		B03C17E71D4ECF50008146A0 /* NewWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C17EA1D4ECF50008146A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B03C17EC1D4ECF50008146A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B03C17EF1D4ECF50008146A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B03C17F21D4ECF50008146A0 /* NewWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewWeather.xcdatamodel; sourceTree = "<group>"; };
 		B03C17F41D4ECF50008146A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		B03C18091D4ECF50008146A0 /* NewWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C180D1D4ECF50008146A0 /* NewWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeatherUITests.swift; sourceTree = "<group>"; };
 		B03C180F1D4ECF50008146A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimeLocationViewController.swift; sourceTree = "<group>"; };
+		B0E4F1AC1DE1C967001D25CA /* SetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetConstants.swift; sourceTree = "<group>"; };
+		B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		B0E4F1AE1DE1C967001D25CA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,9 @@
 		B03C17E91D4ECF50008146A0 /* NewWeather */ = {
 			isa = PBXGroup;
 			children = (
+				B0E4F1B31DE1C996001D25CA /* View Controllers */,
+				B0E4F1AC1DE1C967001D25CA /* SetConstants.swift */,
 				B03C17EA1D4ECF50008146A0 /* AppDelegate.swift */,
-				B03C17EC1D4ECF50008146A0 /* ViewController.swift */,
 				B03C17EE1D4ECF50008146A0 /* Main.storyboard */,
 				B03C17F41D4ECF50008146A0 /* Assets.xcassets */,
 				B03C17F61D4ECF50008146A0 /* LaunchScreen.storyboard */,
@@ -126,6 +133,16 @@
 				B03C180F1D4ECF50008146A0 /* Info.plist */,
 			);
 			path = NewWeatherUITests;
+			sourceTree = "<group>";
+		};
+		B0E4F1B31DE1C996001D25CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */,
+				B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */,
+				B0E4F1AE1DE1C967001D25CA /* SettingsViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,18 +208,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Kevin Amrein";
 				TargetAttributes = {
 					B03C17E61D4ECF50008146A0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = TBTM6MT2W8;
+						LastSwiftMigration = 0810;
 					};
 					B03C17FD1D4ECF50008146A0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = B03C17E61D4ECF50008146A0;
 					};
 					B03C18081D4ECF50008146A0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = B03C17E61D4ECF50008146A0;
 					};
 				};
@@ -260,8 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03C17F31D4ECF50008146A0 /* NewWeather.xcdatamodeld in Sources */,
-				B03C17ED1D4ECF50008146A0 /* ViewController.swift in Sources */,
+				B0E4F1AF1DE1C967001D25CA /* SetTimeLocationViewController.swift in Sources */,
+				B0E4F1B21DE1C967001D25CA /* SettingsViewController.swift in Sources */,
 				B03C17EB1D4ECF50008146A0 /* AppDelegate.swift in Sources */,
+				B0E4F1B11DE1C967001D25CA /* MainPageViewController.swift in Sources */,
+				B0E4F1B01DE1C967001D25CA /* SetConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +354,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -376,8 +402,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -396,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -405,10 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TBTM6MT2W8;
 				INFOPLIST_FILE = NewWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -416,10 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TBTM6MT2W8;
 				INFOPLIST_FILE = NewWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -431,6 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewWeather.app/NewWeather";
 			};
 			name = Debug;
@@ -443,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewWeather.app/NewWeather";
 			};
 			name = Release;
@@ -454,6 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = NewWeather;
 			};
 			name = Debug;
@@ -465,6 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrein.kevin.NewWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = NewWeather;
 			};
 			name = Release;
