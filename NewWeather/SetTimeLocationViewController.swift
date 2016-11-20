@@ -23,9 +23,9 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var twoHoursButton: UIButton!
     @IBOutlet weak var oneHourButton: UIButton!
 
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var currentTimeButton: UIButton!
     @IBOutlet weak var currentLocationButton: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
     
     let locationDelegate = SetConstants.locationManager.delegate
     
@@ -34,6 +34,7 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         // Set the visibility of the UI Elements
+        
         areaLabel.isHidden = false
         locationSearchBar.isHidden = false
         thirtyMinutesButton.isHidden = true
@@ -71,11 +72,14 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     }
     @IBAction func setTimeLocation(_ sender: AnyObject) {
         areaLabel.text = SetConstants.location.description
-    }    
-    @IBAction func fromClicked(_ sender: AnyObject) {
+    }
+    
+    @IBAction func fromClicked(_ sender: UITapGestureRecognizer) {
         settingFrom = true
         settingTime(fromLabel)
     }
+    
+    
     @IBAction func toClicked(_ sender: AnyObject) {
         settingFrom = false
         settingTime(toLabel)
@@ -83,12 +87,8 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     
     // Touch up outside event to close the picker and get rid of the time buttons
     @IBAction func dateTimeSet(_ sender: AnyObject) {
-        datePicker.isHidden = true;
-        thirtyMinutesButton.isHidden = true
-        oneHourButton.isHidden = true
-        twoHoursButton.isHidden = true
-        
         settingTime = false
+        settingTime(fromLabel)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -98,21 +98,13 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     }
     
     
-    fileprivate func settingTime(_ labelToSet : UILabel) {
+    func settingTime(_ labelToSet : UILabel) {
         // Make the datepicker and time buttons appear
-        
-        self.datePicker.isHidden = false
-        self.thirtyMinutesButton.isHidden = false
-        self.oneHourButton.isHidden = false
-        self.twoHoursButton.isHidden = false
-        
-        
-        settingTime = true
-        
-        // This should actively change the value of the label being set
-        while (settingTime) {
-            labelToSet.text = datePicker.description;
-        }
+        datePicker.isHidden = false;
+        thirtyMinutesButton.isHidden = false
+        oneHourButton.isHidden = false
+        twoHoursButton.isHidden = false
+        settingTime = false
     }
     
     fileprivate func defaultTimeChosen(_ time : Double) {
