@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegate {    
-    @IBOutlet weak var areaLabel: UILabel!
-    @IBOutlet weak var locationSearchBar: UISearchBar!
+class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
     @IBOutlet weak var thirtyMinutesButton: UIButton!
     
     @IBOutlet weak var fromLabel: UILabel!
@@ -27,6 +25,8 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var currentTimeButton: UIButton!
     @IBOutlet weak var currentLocationButton: UIButton!
     
+    var resultSearchController:UISearchController? = nil
+    
     let locationDelegate = SetConstants.locationManager.delegate
     
     var settingTime : Bool = false
@@ -35,8 +35,6 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     override func viewDidLoad() {
         // Set the visibility of the UI Elements
         
-        areaLabel.isHidden = false
-        locationSearchBar.isHidden = false
         thirtyMinutesButton.isHidden = true
         setTimeLocationButton.isHidden = true
         twoHoursButton.isHidden = true
@@ -45,7 +43,18 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
         currentLocationButton.isHidden = false
         datePicker.isHidden = true
         SetConstants.locationManager.delegate = self
-    
+        
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+
     }
 
     @IBAction func useCurrentLocation(_ sender: AnyObject) {
@@ -71,7 +80,7 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
         defaultTimeChosen(SetConstants.TWO_HOURS)
     }
     @IBAction func setTimeLocation(_ sender: AnyObject) {
-        areaLabel.text = SetConstants.location.description
+        //areaLabel.text = SetConstants.location.description
     }
     
     @IBAction func fromClicked(_ sender: UITapGestureRecognizer) {
@@ -94,7 +103,7 @@ class SetTimeLocationViewController : UIViewController, CLLocationManagerDelegat
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         SetConstants.location = locations.last!
         
-        locationSearchBar.text = SetConstants.location.description  // TODO: description wont work it give too much detail
+        //locationSearchBar.text = SetConstants.location.description  // TODO: description wont work it give too much detail
     }
     
     

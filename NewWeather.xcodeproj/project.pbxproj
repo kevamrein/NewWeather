@@ -14,6 +14,7 @@
 		B03C17F81D4ECF50008146A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03C17F61D4ECF50008146A0 /* LaunchScreen.storyboard */; };
 		B03C18031D4ECF50008146A0 /* NewWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C18021D4ECF50008146A0 /* NewWeatherTests.swift */; };
 		B03C180E1D4ECF50008146A0 /* NewWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C180D1D4ECF50008146A0 /* NewWeatherUITests.swift */; };
+		B0AE18F11DE235E900EBE641 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE18F01DE235E900EBE641 /* LocationSearchTable.swift */; };
 		B0E4F1AF1DE1C967001D25CA /* SetTimeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */; };
 		B0E4F1B01DE1C967001D25CA /* SetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AC1DE1C967001D25CA /* SetConstants.swift */; };
 		B0E4F1B11DE1C967001D25CA /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */; };
@@ -51,6 +52,7 @@
 		B03C18091D4ECF50008146A0 /* NewWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03C180D1D4ECF50008146A0 /* NewWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWeatherUITests.swift; sourceTree = "<group>"; };
 		B03C180F1D4ECF50008146A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AE18F01DE235E900EBE641 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimeLocationViewController.swift; sourceTree = "<group>"; };
 		B0E4F1AC1DE1C967001D25CA /* SetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetConstants.swift; sourceTree = "<group>"; };
 		B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				B0E4F1AB1DE1C967001D25CA /* SetTimeLocationViewController.swift */,
 				B0E4F1AD1DE1C967001D25CA /* MainPageViewController.swift */,
 				B0E4F1AE1DE1C967001D25CA /* SettingsViewController.swift */,
+				B0AE18F01DE235E900EBE641 /* LocationSearchTable.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AE18F11DE235E900EBE641 /* LocationSearchTable.swift in Sources */,
 				B03C17F31D4ECF50008146A0 /* NewWeather.xcdatamodeld in Sources */,
 				B0E4F1AF1DE1C967001D25CA /* SetTimeLocationViewController.swift in Sources */,
 				B0E4F1B21DE1C967001D25CA /* SettingsViewController.swift in Sources */,
